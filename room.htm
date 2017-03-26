@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <!-- Theme Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<title>Admin - Terracotta Hotel & Resort</title>
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> Hệ Thống Đặt Phòng - Terracotta Hotel & Resort</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#modalProfile" data-toggle="modal"><i class="fa fa-fw fa-user"></i> Thông tin</a>
+                        </li>
+                        <li>
+                            <a href="#modalAddAdmin" data-toggle="modal"><i class="fa fa-fw fa-plus"></i> Thêm quản lí</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Đăng xuất</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="booking.htm"><i class="fa fa-fw fa-calendar"></i> Quản lí Đặt Phòng</a>
+                    </li>
+                    <li class="active">
+                        <a href="room.htm"><i class="glyphicon glyphicon-lamp"></i> Quản Lí Phòng</a>
+                    </li>
+                    <li>
+                        <a href="service.htm"><i class="fa fa-fw fa-glass"></i> Quản Lí Dịch Vụ</a>
+                    </li>
+                    
+                    <li>
+                        <a href="promotion.htm"><i class="fa fa-fw fa-gift"></i> Khuyến Mãi </a>
+                    </li>                 
+                    <li>
+                        <a href="comments.htm"><i class="fa fa-fw fa-comments-o"></i> Ý Kiến Đóng Góp</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <!-- Modal add Admin-->
+        <div class="modal fade" id="modalAddAdmin" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-sm" role="document">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Thêm Quản Lí</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Mã Quản Lí</label>
+                                <input type="text" class="form-control" placeholder="" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Tên Quản Lí</label>
+                                <input type="text" class="form-control" placeholder="Nhập họ tên">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>E-mail</label>
+                                <input type="text" class="form-control" placeholder="Nhập e-mail">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Mật Khẩu</label>
+                                <input type="password" class="form-control" placeholder="Nhập mật khẩu">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Xác nhận mật khẩu</label>
+                                <input type="password" class="form-control" placeholder="Nhập lại mật khẩu">
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8 col-md-offset-2">
+                            <button type="" class="btn btn-primary btn-block" data-dismiss="modal">Lưu lại</button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!-- /Modal content -->
+            </div>
+        </div>
+        <!-- /Modal add Admin-->
+        <!-- Modal Profile-->
+        <div class="modal fade" id="modalProfile" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-sm" role="document">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Thông Tin Quản Lí</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Mã Quản Lí</label>
+                                <input type="text" class="form-control" placeholder="" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Tên Quản Lí</label>
+                                <input type="text" class="form-control" placeholder="Nhập họ tên">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>E-mail</label>
+                                <input type="text" class="form-control" placeholder="Nhập e-mail">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Mật Khẩu mới</label>
+                                <input type="password" class="form-control" placeholder="Nhập mật khẩu">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Xác nhận mật khẩu mới</label>
+                                <input type="password" class="form-control" placeholder="Nhập lại mật khẩu">
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8 col-md-offset-2">
+                            <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Lưu lại</button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!-- /Modal content -->
+            </div>
+        </div>
+        <!-- /Modal add Admin-->
+
+		
+		<div id="page-wrapper">
+			<div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Quản Lí Phòng
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="glyphicon glyphicon-lamp"></i> Quản Lí Phòng
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        
+                        <button class="btn btn-success btn-lg" type="button" data-toggle="modal" data-target="#myModal">
+                            <i class="fa fa-plus-circle"></i> Phòng mới 
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-sm">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header ">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Thêm Phòng Mới</h4>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <label>Tên Phòng</label>
+                                                <input type="text" class="form-control" placeholder="Nhập tên phòng">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <label>Loại Phòng</label>
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">Phòng Standard</option>
+                                                    <option value="">Phòng Superior</option>
+                                                    <option value="">Phòng Deluxe</option>
+                                                    <option value="">Phòng Premium - Villa</option>
+                                                    <option value="">Phòng Junior - Villa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 col-md-offset-2">
+                                            <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Lưu lại</button>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div> <!-- /Modal content -->
+                        </div> <!-- /Modal -->
+
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="update_availability.htm">
+                            <button class="btn btn-primary btn-lg"><i class="fa fa-refresh"></i> Cập nhật tình trạng phòng</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div>
+                    <h2>Danh Sách Phòng</h2>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Mã Phòng</th>
+                                    <th>Loại Phòng</th>
+                                    <th>Tên Phòng</th>                                   
+                                    <th>Tình Trạng Hiện Tại</th>
+                                    <th>Thao Tác</th>
+                                                                      
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>DE01</td>
+                                    <td>Deluxe</td>
+                                    <td>101</td>
+                                    <td style="color: blue"><i class="glyphicon glyphicon-user" ></i> Có Khách</td>
+                                    <td>
+                                        <a href="#modalDetailsRoom" data-toggle="modal">
+                                            <i class="fa fa-refresh"></i>
+                                            Cập nhật
+                                        </a>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>ST01</td>
+                                    <td>Standard</td>
+                                    <td>102</td>
+                                    <td style="color: blue"><i class="glyphicon glyphicon-user" ></i> Có Khách</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>SU01</td>
+                                    <td>Superior</td>
+                                    <td>103</td>
+                                    <td style="color: green"><i class="glyphicon glyphicon-ok"></i> Trống</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>SU02</td>
+                                    <td>Superior</td>
+                                    <td>104</td>
+                                    <td style="color: red"><i class="glyphicon glyphicon-wrench"></i> Sửa Chữa</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>PR01</td>
+                                    <td>Premium</td>
+                                    <td>Villa 5 - 01</td>
+                                     <td style="color: blue"><i class="glyphicon glyphicon-user" ></i> Có Khách</td>
+                                     
+                                </tr>
+                                <tr>
+                                    <td>DE02</td>
+                                    <td>Deluxe</td>
+                                    <td>Villa 1 - 01</td>
+                                    <td style="color: red"><i class="glyphicon glyphicon-wrench"></i> Sửa Chữa</td>
+                                    
+                                </tr>
+                            </tbody>
+
+
+
+			</div>
+
+
+
+
+
+
+		</div>
+
+
+    </div>
+    <!-- /#wrapper -->
+<button class="btn btn-default" data-toggle="modal" data-target="#modalDetailsRoom"> AAAAA</button>
+
+
+        <div class="modal fade" id="modalDetailsRoom" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-sm" role="document">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Thông Tin Phòng ~Mã phòng~</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Mã Phòng</label>
+                                <input type="text" class="form-control" placeholder="" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Tên Phòng</label>
+                                <input type="text" class="form-control" placeholder="Nhập tên phòng" value="101">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Loại phòng</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">Phòng Standard</option>
+                                    <option value="">Phòng Superior</option>
+                                    <option value="" selected>Phòng Deluxe</option>
+                                    <option value="">Phòng Premium - Villa</option>
+                                    <option value="">Phòng Junior - Villa</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Tình Trạng Phòng</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="" selected>Có Khách</option>
+                                    <option value="">Trống</option>
+                                    <option value="">Sửa Chữa</option>                                   
+                                </select>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-md-8 col-md-offset-2">
+                            <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Cập nhật</button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!-- /Modal content -->
+            </div>
+        </div>
+      
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+</body>
+</html>
